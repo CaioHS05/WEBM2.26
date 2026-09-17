@@ -1,17 +1,12 @@
-var Value1 = 25
-var Value2 = 25
-var Value3 = "Pizza"
+const form = document.getElementById("calcForm")
 
-function plus(a,b){
-    let c = a+b
-    return (c)
-}
+form.addEventListener("submit",function(e){
+    e.preventDefault();
 
-console.log(plus(Value1,Value2))
+    const a = Number(document.getElementById("num1").value)
+    const b = Number(document.getElementById("num2").value)
 
-function pepperoni(c){
-    var Value3 = c
-    return (c)
-}
+    const soma = a+b
 
-console.log(pepperoni(Value3))
+    document.getElementById("resultado").textContent = soma
+})
